@@ -47,8 +47,17 @@
           <td class="align-middle">{{ topic.replies }}</td>
           <td class="align-middle">{{ topic.views }}</td>
           <td class="align-middle">{{ topic.last_updated|naturaltime }}</td>
+
         </tr>
       {% endfor %}
+    <script type="text/javascript">
+    var django_var=""
+    var my_array={{ options_for_js|safe }}
+        for (var i in my_array){
+           aler(my_array(i));
+        }
+         alert(django_var);
+    </script>
     </tbody>
   </table>
  {% include 'includes/pagination.html' %}
